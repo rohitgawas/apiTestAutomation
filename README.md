@@ -1,6 +1,6 @@
 ReadMe.md :
 
-Getting started :
+**Getting started :**
 
 1.	Clone the repository in your local storage
 2.	Open the repository in any JavaScript supporting IDE.
@@ -26,7 +26,7 @@ OR
 
 
 
-Folder Structure :
+**Folder Structure :**
 ```
 cypress
   -downloads
@@ -47,7 +47,8 @@ cypress
 
 
 
-HTML report generation :
+**HTML report generation :**
+
 To generate html reports of tests , we use mochawesome.
 To generate reports :
 1.	In terminal run following command :
@@ -66,7 +67,7 @@ This will run tests in headless mode and will generate the reports in mochawesom
 
 
 
-Test cases :
+**Test cases :**
 
 1.	verifyPeopleDetails.js :
 
