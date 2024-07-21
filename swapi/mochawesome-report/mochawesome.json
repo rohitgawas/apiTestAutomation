@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-20T14:27:19.814Z",
+    "end": "2024-07-20T14:27:20.522Z",
+    "duration": 708,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "660e8c30-62c1-447c-a43e-ceb98719411d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\verifyYavinData.js",
+      "file": "cypress\\e2e\\verifyYavinData.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b65c8122-8b29-4f05-881d-24cf73263869",
+          "title": "Verify planets data",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Yavin planet data",
+              "fullTitle": "Verify planets data Verify Yavin planet data",
+              "timedOut": null,
+              "duration": 673,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"GET\", this.data.yavin_url).then(function (yavinInfo) {\n  expect(yavinInfo.status).to.eql(200);\n  expect(yavinInfo.body.name).to.eql(this.data.yavin_name);\n  expect(yavinInfo.body.rotation_period).to.eql(this.data.yavin_rotation_period);\n  expect(yavinInfo.body.orbital_period).to.eql(this.data.yavin_orbital_period);\n  expect(yavinInfo.body.diameter).to.eql(this.data.yavin_diameter);\n  expect(yavinInfo.body.climate).to.eql(this.data.yavin_climate);\n  expect(yavinInfo.body.gravity).to.eql(this.data.yavin_gravity);\n  expect(yavinInfo.body.terrain).to.eql(this.data.yavin_terrain);\n  expect(yavinInfo.body.surface_water).to.eql(this.data.yavin_surface_water);\n  expect(yavinInfo.body.population).to.eql(this.data.yavin_population);\n  expect(yavinInfo.body.residents).to.eql(this.data.yavin_residents);\n  expect(yavinInfo.body.films).to.eql(this.data.yavin_films);\n  cy.request(\"GET\", yavinInfo.body.films[0]).then(function (filmsName) {\n    expect(filmsName.body.title).to.eql(this.data.yavin_film_title);\n  });\n});",
+              "err": {},
+              "uuid": "63f08112-06ff-4e43-b24b-c895520401b5",
+              "parentUUID": "b65c8122-8b29-4f05-881d-24cf73263869",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63f08112-06ff-4e43-b24b-c895520401b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 673,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

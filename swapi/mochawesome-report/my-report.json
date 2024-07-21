@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-21T04:55:25.376Z",
+    "end": "2024-07-21T04:55:29.275Z",
+    "duration": 3899,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1fb29787-0b56-4596-a89f-bc6962db5dc2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\verifyPeopleDetails.js",
+      "file": "cypress\\e2e\\verifyPeopleDetails.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "298260e2-73f6-4883-9c13-48273f0ef4c9",
+          "title": "Verify people details using API request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify details of Luke Skywalker",
+              "fullTitle": "Verify people details using API request Verify details of Luke Skywalker",
+              "timedOut": null,
+              "duration": 3744,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"GET\", this.data.lukeURL).then(lukeInfo => {\n  expect(lukeInfo.status).to.eql(200);\n  expect(lukeInfo.body).to.have.property(\"name\");\n  expect(lukeInfo.body.name).to.eql(this.data.lukeName);\n  expect(lukeInfo.body.height).to.eql(this.data.lukeHeight);\n  expect(lukeInfo.body.mass).to.eql(this.data.lukeMass);\n  expect(lukeInfo.body.hair_color).to.eql(this.data.lukeHairColor);\n  expect(lukeInfo.body.skin_color).to.eql(this.data.lukeSkinColor);\n  expect(lukeInfo.body.eye_color).to.eql(this.data.lukeEyeColor);\n  expect(lukeInfo.body.birth_year).to.eql(this.data.lukeBirthYear);\n  expect(lukeInfo.body.gender).to.eql(this.data.lukeGender);\n  expect(lukeInfo.body.homeworld).to.eql(this.data.lukePlanetURL);\n  cy.request(lukeInfo.body.homeworld).then(function (homeW) {\n    expect(homeW.body.name).to.eql(this.data.lukeHomeWorld);\n  });\n  expect(lukeInfo.body.species).to.eql(this.data.lukeSpecies);\n  expect(lukeInfo.body.films.length).to.eql(this.data.filmsName.length);\n  lukeInfo.body.films.forEach(function ($el) {\n    cy.request(\"GET\", $el).then(function (films) {\n      expect(this.data.filmsName).to.include(films.body.title);\n    });\n  });\n  lukeInfo.body.vehicles.forEach(function (veh) {\n    cy.request(\"GET\", veh).then(function (vehicleName) {\n      expect(this.data.vehiclesOfLuke).includes(vehicleName.body.name);\n    });\n  });\n  lukeInfo.body.starships.forEach(function (starsh) {\n    cy.request(\"GET\", starsh).then(function (starshName) {\n      expect(this.data.starshipsOfLuke).includes(starshName.body.name);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "add07b6f-62a5-44b0-9aea-1f652dd2631e",
+              "parentUUID": "298260e2-73f6-4883-9c13-48273f0ef4c9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "add07b6f-62a5-44b0-9aea-1f652dd2631e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "my-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "reportFilename": "my-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

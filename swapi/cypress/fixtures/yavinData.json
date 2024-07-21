@@ -1,0 +1,17 @@
+{
+	"yavin_name": "Yavin IV",
+	"yavin_rotation_period": "24",
+	"yavin_orbital_period": "4818",
+	"yavin_diameter": "10200",
+	"yavin_climate": "temperate, tropical",
+	"yavin_gravity": "1 standard",
+	"yavin_terrain": "jungle, rainforests",
+	"yavin_surface_water": "8",
+	"yavin_population": "1000",
+	"yavin_residents": [],
+	"yavin_films": [
+		"https://swapi.dev/api/films/1/"
+	],
+	"yavin_url": "https://swapi.dev/api/planets/3/",
+  "yavin_film_title":"A New Hope"
+}

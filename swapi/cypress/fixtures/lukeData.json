@@ -1,0 +1,23 @@
+{
+
+    "filmsName":["A New Hope",
+    "The Empire Strikes Back"
+    , "Return of the Jedi"
+    , "Revenge of the Sith"] ,
+
+ "vehiclesOfLuke":["Snowspeeder" , "Imperial Speeder Bike"],
+
+ "starshipsOfLuke":["X-wing" , "Imperial shuttle"] ,
+ "lukeURL": "https://swapi.dev/api/people/1/",
+ "lukePlanetURL": "https://swapi.dev/api/planets/1/",
+ "lukeName":"Luke Skywalker",
+ "lukeHeight": "172",
+ "lukeMass":"77",
+ "lukeHairColor":"blond",
+ "lukeSkinColor": "fair",
+ "lukeEyeColor": "blue",
+ "lukeBirthYear":"19BBY",
+ "lukeGender" : "male" ,
+ "lukeHomeWorld":"Tatooine",
+ "lukeSpecies":[]
+}
