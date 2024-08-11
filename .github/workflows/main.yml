@@ -20,4 +20,4 @@ jobs:
     - name: install cypress
       run: npm install cypress@12.12.0
     - name: run tests
-      run: npx cypress run
+      run: npx cypress run --headless
