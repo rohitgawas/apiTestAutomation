@@ -17,5 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: "20.x"
+    - name: istall cypress
+      uses: npm install cypres@12.12.0
     - name: run tests
       run: npx cypress run
