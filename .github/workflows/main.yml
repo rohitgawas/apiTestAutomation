@@ -19,5 +19,7 @@ jobs:
         node-version: "20.x"
     - name: install cypress
       run: npm install cypress@12.12.0
+    - name: navigate to the folder
+      run: cd .\swapi
     - name: run tests
       run: npx cypress run --headless
